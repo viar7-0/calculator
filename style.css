@@ -1,0 +1,61 @@
+*{
+    font-size: large;
+}
+.screenRatio{
+    display:flex;
+    height:620px;
+    width:515px;
+    background-color: black;
+    border:5px solid rgb(203, 109, 22);
+    border-radius: 5%;
+
+
+
+}
+.display{
+    color: aqua;
+    display: flex;
+    justify-self:right;
+    font-size: 40px;
+
+
+    margin-bottom:20px;
+
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding:0px;
+    margin:0px;
+    height:125px;
+    width:125px;
+    border-radius: 50%;
+}
+
+.container {
+    display:flex;
+    margin-top: auto;
+    justify-content: flex-start;
+    
+    
+}
+.one{
+
+    align-items: center;
+    justify-content: center;
+    height:100px;
+    width:125px;
+
+}
+.operand{
+    display: flex;
+    flex:1;
+    margin-top:auto;
+    flex-wrap: wrap;
+   
+
+}
+
