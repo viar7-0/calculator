@@ -90,15 +90,19 @@ function update() {
             if(k=='=' ){
                 if(num2!=''){
                 display.textContent = ans 
-                 
+                num1=ans
+                num2=''
+                sign=undefined
+                f=true
                 }
                 else {
                     display.textContent="ERR"
-                }
-                 f=false
+                     f=false
                     num1 = ''
                     sign = undefined
                     num2 = ''
+                }
+               
             }
             else{sign = k
             f = true
