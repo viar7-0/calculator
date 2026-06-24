@@ -39,6 +39,15 @@ function update() {
 
 
         button.addEventListener("click", function (event) {
+            
+            t=this.textContent
+            if(t=='clear'){
+                num1=''
+                sign=undefined
+                num2=''
+                display.textContent=''
+            }
+            else{
 
             if (!f) {
 
@@ -57,6 +66,7 @@ function update() {
                    
                 }
             }
+        }
 
         })
 

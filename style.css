@@ -13,12 +13,12 @@
 }
 .display{
     background-color: bisque;
-
     display: flex;
     justify-content: flex-end;
     margin-top: auto;
     font-size: 40px;
     border-radius: 15%;
+    height:47px;
 
     margin-right:10px;
     margin-left: 10px;
