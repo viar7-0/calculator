@@ -9,10 +9,7 @@
     border:5px solid bisque;
     border-radius: 5%;
     flex-direction: column;
-    padding: 5px;;
-
-
-
+    padding: 5px;
 }
 .display{
     background-color: bisque;
@@ -43,15 +40,9 @@ body{
 
 .container {
     display:flex;
-    margin-top: auto;
-    justify-content: flex-start;
-    
-    
+    margin-top: auto;  
 }
 .one{
-
-    align-items: center;
-    justify-content: center;
     height:100px;
     width:125px;
 
@@ -59,7 +50,6 @@ body{
 .operand{
     display: flex;
     flex:1;
-    margin-top:auto;
     flex-wrap: wrap;
 }
 
