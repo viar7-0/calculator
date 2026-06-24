@@ -1,49 +1,106 @@
-function add (a,b){
-    return a+b
+function add(a, b) {
+    return a + b
 }
-function substract(a,b){
-    return a-b
+function substract(a, b) {
+    return a - b
 }
-function multiply(a,b){
-    return a*b
+function multiply(a, b) {
+    return a * b
 }
-function divide(a,b){
-    return a/b
+function divide(a, b) {
+    return a / b
 }
 
-let num1,sign,num2
+let num1 = '', sign, num2 = '', ans
 
-function operate(a,sign,b){
-    if(sign=='+') {
-        add(a,b)
+function operate(first, sign, second) {
+    a = Number(first)
+    b = Number(second)
+    if (sign == '+') {
+        ans = add(a, b)
     }
-    else if(sign=='-'){
-        substract(a,b)
+    else if (sign == '-') {
+        ans = substract(a, b)
     }
-    else if (sign=='x'){
-        multiply(a,b)
+    else if (sign == 'x') {
+        ans = multiply(a, b)
     }
-    else if(sign=="/"){
-        divide(a,b)
+    else if (sign == "/") {
+        ans = divide(a, b)
     }
 }
-function update(){
+function update() {
     const numClick = document.querySelectorAll(".btn")
     const display = document.querySelector('.display')
+    const opClick = document.querySelectorAll('.one')
+    k = ''
+    f = false
     numClick.forEach(button => {
-        button.addEventListener("click",function(event) {
-            k=this.textContent
-            if(k!='=' && k!='clear')
-            {
-                num1 = k
+
+
+        button.addEventListener("click", function (event) {
+
+            if (!f) {
+
+                if (num1 != 'clear') {
+                    num1 += this.textContent
+                    display.textContent = num1
+                }
+            }
+            else {
+
+                if (num2 != 'clear') {
                 
-                display.textContent = num1
+                    num2 += this.textContent
+                    display.textContent = num2
+                    operate(num1, sign, num2)
+                   
+                }
             }
 
         })
-        
+
+
+
+
+    })
+
+
+    opClick.forEach(opBtn => {
+        opBtn.addEventListener("click", function (event) {
+             k = this.textContent
+
+            if(sign!=undefined && k!='='){
+                display.textContent=ans
+                num1 = ans
+                num2 = ''
+            }
+
+           
+            if(k=='=' ){
+                if(num2!=''){
+                display.textContent = ans 
+                 
+                }
+                else {
+                    display.textContent="ERR"
+                }
+                 f=false
+                    num1 = ''
+                    sign = undefined
+                    num2 = ''
+            }
+            else{sign = k
+            f = true
+            }
+           // display.textContent = sign
+
+
+        })
     })
 
 
 }
+
+
 update()

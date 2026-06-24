@@ -45,6 +45,7 @@ body{
 .one{
     height:100px;
     width:125px;
+     border-radius: 50%;
 
 }
 .operand{
