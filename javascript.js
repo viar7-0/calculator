@@ -27,3 +27,23 @@ function operate(a,sign,b){
         divide(a,b)
     }
 }
+function update(){
+    const numClick = document.querySelectorAll(".btn")
+    const display = document.querySelector('.display')
+    numClick.forEach(button => {
+        button.addEventListener("click",function(event) {
+            k=this.textContent
+            if(k!='=' && k!='clear')
+            {
+                num1 = k
+                
+                display.textContent = num1
+            }
+
+        })
+        
+    })
+
+
+}
+update()
